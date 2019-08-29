@@ -14,7 +14,7 @@ Improvements:
  -
 
 Other changes:
- -
+ - Remove the bind true flag from 3PID calls on registration (#3252)
 
 Bugfix:
  -

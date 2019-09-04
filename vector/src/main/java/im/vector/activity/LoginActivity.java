@@ -1258,6 +1258,7 @@ public class LoginActivity extends MXCActionBarActivity implements RegistrationM
 
                         // refresh the messages
                         hideMainLayoutAndToast(getString(R.string.auth_reset_password_email_validation_message, email));
+                        mButtonsView.setVisibility(View.VISIBLE);
 
                         mMode = MODE_FORGOT_PASSWORD_WAITING_VALIDATION;
                         refreshDisplay();
@@ -1356,6 +1357,7 @@ public class LoginActivity extends MXCActionBarActivity implements RegistrationM
 
                         // refresh the messages
                         hideMainLayoutAndToast(getString(R.string.auth_reset_password_success_message));
+                        mButtonsView.setVisibility(View.VISIBLE);
                         mIsPasswordReset = true;
                         refreshDisplay();
                     }

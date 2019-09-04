@@ -21,7 +21,7 @@ Other changes:
  - Privacy: Remove the bind true flag from 3PID calls on registration (#3252)
 
 Bugfix:
- -
+ - Fix reset password broken UI (#3125)
 
 Translations:
  - Riot is fully translated into Korean thanks to paijai.

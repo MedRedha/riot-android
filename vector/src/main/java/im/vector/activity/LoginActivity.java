@@ -2112,7 +2112,7 @@ public class LoginActivity extends MXCActionBarActivity implements RegistrationM
      */
     private void checkLoginFlows() {
         // check only login flows
-        if (mMode != MODE_LOGIN) {
+        if (mMode != MODE_LOGIN && mMode != MODE_FORGOT_PASSWORD) {
             return;
         }
 
@@ -2131,7 +2131,7 @@ public class LoginActivity extends MXCActionBarActivity implements RegistrationM
                         // stop listening to network state
                         removeNetworkStateNotificationListener();
 
-                        if (mMode == MODE_LOGIN) {
+                        if (mMode == MODE_LOGIN || mMode == MODE_FORGOT_PASSWORD) {
                             enableLoadingScreen(false);
                             setActionButtonsEnabled(true);
 
@@ -2170,7 +2170,7 @@ public class LoginActivity extends MXCActionBarActivity implements RegistrationM
                     }
 
                     private void onError(String errorMessage) {
-                        if (mMode == MODE_LOGIN) {
+                        if (mMode == MODE_LOGIN || mMode == MODE_FORGOT_PASSWORD) {
                             enableLoadingScreen(false);
                             setActionButtonsEnabled(false);
                             displayErrorOnUrl(mHomeServerTextTil, errorMessage);
